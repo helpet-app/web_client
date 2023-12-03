@@ -120,7 +120,7 @@
                                         </div>
                                     </div>
                                     <div class="submit-section">
-                                        <button type="submit" class="btn btn-primary submit-btn" @click="setValues">Save Changes</button>
+                                        <button type="submit" class="btn btn-primary submit-btn" @click="setValues">Сохранить</button>
                                     </div>
                                 </form>
                                 <!-- /Profile Settings Form -->

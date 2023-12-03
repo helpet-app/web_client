@@ -16,7 +16,6 @@
                             </a>
                             <div className="dropdown-menu dropdown-menu-right">
                                 <a className="dropdown-item" href="/pages/doctor-profile">Личный кабинет</a>
-                                <a className="dropdown-item" href="/mentor/profile-settings">Настройки</a>
                                 <a className="dropdown-item" href="/pages/login">Выйти</a>
                             </div>
                         </li>

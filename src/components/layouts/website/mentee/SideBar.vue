@@ -23,24 +23,13 @@
                 </div>
             </div>
             <div class="custom-sidebar-nav">
-                <ul>
-                    <li><router-link to="/mentee/index" v-bind:class="{'active': currentPath == 'mentee-dashboard'}"><i class="fas fa-home"></i>Dashboard <span><i class="fas fa-chevron-right"></i></span></router-link></li>
-                    <li><router-link to="/mentee/bookings" v-bind:class="{'active': currentPath == 'mentee-bookings'}"><i class="fas fa-clock"></i>Bookings <span><i class="fas fa-chevron-right"></i></span></router-link></li>
-                    <li><router-link to="/mentee/chat" v-bind:class="{'active': currentPath == 'mentee-chat'}"><i class="fas fa-comments"></i>Messages <span><i class="fas fa-chevron-right"></i></span></router-link></li>
-                    <li><router-link to="/mentee/favourites" v-bind:class="{'active': currentPath == 'mentee-favourites'}"><i class="fas fa-star"></i>Favourites <span><i class="fas fa-chevron-right"></i></span></router-link></li>
-                    <li><router-link to="/mentee/mentor-profile" v-bind:class="{'active': currentPath == 'mentee-mentor-profile'}"><i class="fas fa-user-cog"></i>Profile <span><i class="fas fa-chevron-right"></i></span></router-link></li>
-                    <li><router-link to="/pages/login"><i class="fas fa-sign-out-alt"></i>Logout <span><i class="fas fa-chevron-right"></i></span></router-link></li>
-                </ul>
+
             </div>
         </div>
     <!-- /Sidebar -->
 </template>
 <script>
 export default {
-    computed: {
-        currentPath() {
-            return this.$route.name;
-        }
-    }
+
 }
 </script>

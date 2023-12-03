@@ -5419,6 +5419,12 @@ html.menu-opened body {
 .change-avatar .profile-img {
 	margin-right: 15px;
 }
+.chat-img {
+	border-radius: 4px;
+	height: 100px;
+	width: 100px;
+	object-fit: cover;
+}
 .change-avatar .profile-img img {
     border-radius: 4px;
     height: 100px;

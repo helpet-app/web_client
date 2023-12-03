@@ -1,74 +1,32 @@
 [
     {
         "id": 1,
-        "name": "Tyrone Roberts",
+        "status": "pending",
+        "link": "https://meet.google.com/hog-ybdm-sxi",
+        "name": "Анна Успенская",
         "image": "user2.jpg",
-        "email": "tyroneroberts@adobe.com",
+        "email": "uspe3545@yandex.ru",
         "scheduled_date": "08 April 2020",
-        "scheduled_timings": "9.00 AM - 10.00 AM"
+        "scheduled_timings": "9.00 - 10.00"
     },
     {
         "id": 2,
-        "name": "Julie Pennington",
+        "status": "pending",
+        "link": "https://meet.google.com/hgg-htdm-sxi",
+        "name": "София Кузьмина",
         "image": "user1.jpg",
-        "email": "julie@adobe.com",
+        "email": "sofaloveyou@yandex.ru",
         "scheduled_date": "08 April 2020",
-        "scheduled_timings": "9.00 AM - 12.00 AM"
+        "scheduled_timings": "10.00 - 10.55"
     },
     {
         "id": 3,
-        "name": "Allen Davis",
+        "status": "pending",
+        "link": "https://meet.google.com/hjt-dsfg-sxi",
+        "name": "Андрей Новиков",
         "image": "user3.jpg",
-        "email": "allendavis@adobe.com",
+        "email": "andrew911@mail.com",
         "scheduled_date": "07 April 2020",
-        "scheduled_timings": "9.00 AM - 10.00 AM"
-    },
-    {
-        "id": 4,
-        "name": "Patricia Manzi",
-        "image": "user4.jpg",
-        "email": "patriciamanzi@adobe.com",
-        "scheduled_date": "07 April 2020",
-        "scheduled_timings": "9.00 AM - 10.00 AM"
-    },
-    {
-        "id": 5,
-        "name": "Olive Lawrence",
-        "image": "user5.jpg",
-        "email": "olivelawrence@adobe.com",
-        "scheduled_date": "06 April 2020",
-        "scheduled_timings": "9.00 AM - 10.00 AM"
-    },
-    {
-        "id": 6,
-        "name": "Frances Foster",
-        "image": "user6.jpg",
-        "email": "frances@adobe.com",
-        "scheduled_date": "06 April 2020",
-        "scheduled_timings": "9.00 AM - 10.00 AM"
-    },
-    {
-        "id": 7,
-        "name": "Deloris Briscoe",
-        "image": "user7.jpg",
-        "email": "delorisbriscoe@adobe.com",
-        "scheduled_date": "05 April 2020",
-        "scheduled_timings": "9.00 AM - 10.00 AM"
-    },
-    {
-        "id": 8,
-        "name": "Tyrone Roberts",
-        "image": "user2.jpg",
-        "email": "tyroneroberts@adobe.com",
-        "scheduled_date": "08 April 2020",
-        "scheduled_timings": "9.00 AM - 10.00 AM"
-    },
-    {
-        "id": 9,
-        "name": "Julie Pennington",
-        "image": "user1.jpg",
-        "email": "julie@adobe.com",
-        "scheduled_date": "08 April 2020",
-        "scheduled_timings": "9.00 AM - 10.00 AM"
+        "scheduled_timings": "11.00 - 11.55 "
     }
 ]

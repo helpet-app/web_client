@@ -14,6 +14,7 @@
     "apexcharts": "^3.27.2",
     "axios": "^1.6.2",
     "bootstrap": "4.5.3",
+    "caniuse-lite": "^1.0.30001565",
     "datatables.net-bs4": "^3.2.2",
     "datatables.net-dt": "^1.1.0",
     "feather-icons": "^4.28.0",

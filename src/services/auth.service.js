@@ -1,11 +1,11 @@
 import axios from 'axios';
 //TODO поменять URL
-const API_URL = 'http://backend.helppet.website:8080/';
+const API_URL = 'http://backend.helppet.website:8080/account-service/api/v1/auth/';
 
 class AuthService {
     login(username, password) {
         return axios
-            .post(API_URL + 'signin', {
+            .post(API_URL + 'sign-in', {
                 username: username,
                 password: password,
             })
@@ -23,11 +23,16 @@ class AuthService {
     }
 
     register(firstName, username, email, password) {
-        return axios.post(API_URL + 'signup', {
+        const data = {
             firstName: firstName,
             username: username,
             email: email,
             password: password,
+        }
+        return axios.post(API_URL + 'sign-up', data, {
+                headers: {
+                    "Access-Control-Allow-Origin": "*",
+                }
         });
     }
 }

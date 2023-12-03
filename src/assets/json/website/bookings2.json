@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "status": "active",
+        "link": "https://meet.google.com/nht-ybdm-bgt",
+        "name": "Ирина Лукина",
+        "image": "user2.jpg",
+        "email": "lukirina@yandex.ru",
+        "scheduled_date": "08 April 2020",
+        "scheduled_timings": "9.00 - 10.00"
+    },
+    {
+        "id": 2,
+        "status": "pending",
+        "link": "https://meet.google.com/wow-ugoy-nic",
+        "name": "Дмитрий Соколов",
+        "image": "user1.jpg",
+        "email": "dima1996@yandex.ru",
+        "scheduled_date": "08 April 2020",
+        "scheduled_timings": "10.00 - 11.55"
+    },
+    {
+        "id": 3,
+        "status": "reject",
+        "link": "https://meet.google.com/meh-ewtf-sad",
+        "name": "Иван Сергеенко",
+        "image": "user3.jpg",
+        "email": "i.sergeenko@mail.com",
+        "scheduled_date": "07 April 2020",
+        "scheduled_timings": "12.00 - 12.55 "
+    }
+]

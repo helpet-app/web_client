@@ -13,8 +13,8 @@ import LayoutHeader1 from './components/layouts/website/Header1'
 import LayoutFooter from './components/layouts/website/Footer'
 import LayoutHeaderAdmin from './components/layouts/admin/Header'
 import LayoutSidebar from './components/layouts/admin/Sidebar'
-import Sidebar from './components/layouts/website/mentor/Sidebar.vue'
-import Sidebar1 from './components/layouts/website/mentee/Sidebar.vue'
+// import Sidebar from './components/layouts/website/mentor/Sidebar.vue'
+// import Sidebar1 from './components/layouts/website/mentee/Sidebar.vue'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
 import VueSelect from 'vue3-select2-component'
@@ -68,11 +68,13 @@ if(window.location.href.includes("admin")) {
 
 import Raphael from 'raphael/raphael'
 import store from "./store";
+import FullChat from "./components/website/FullChat.vue";
 global.Raphael = Raphael
 const app = createApp(App)
 
 /** Global components    */
 app.component('small-chat', SmallChat)
+app.component('full-chat', FullChat)
 app.component('doctor-header', DoctorHeader)
 app.component('doctor-header1', DoctorHeader1)
 app.component('doctor-sidebar', DoctorSidebar)
@@ -81,8 +83,8 @@ app.component('layout-header1', LayoutHeader1)
 app.component('layout-footer', LayoutFooter)
 app.component('layout-headeradmin', LayoutHeaderAdmin)
 app.component('layout-sidebar', LayoutSidebar)
-app.component('sidebar', Sidebar)
-app.component('sidebar1', Sidebar1)
+// app.component('sidebar', Sidebar)
+// app.component('sidebar1', Sidebar1)
 app.component('carousel', Carousel)
 app.component('vue-select', VueSelect)
 app.component('slide', Slide)

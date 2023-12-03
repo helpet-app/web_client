@@ -27,6 +27,11 @@ module.exports = (env = {}) => ({
         use: 'vue-loader'
       },
       {
+        test: /\.mjs$/,
+        include: /node_modules/,
+        type: "javascript/auto"
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: "babel-loader"
@@ -84,17 +89,20 @@ module.exports = (env = {}) => ({
     new VueLoaderPlugin(),
   ],
   optimization: {
-    runtimeChunk: 'single',
-    splitChunks: {
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all'
-        }
-      }
-    }
+    minimize: false
   },
+  // optimization: {
+    // runtimeChunk: 'single',
+    // splitChunks: {
+    //   cacheGroups: {
+    //     vendor: {
+    //       test: /[\\/]node_modules[\\/]/,
+    //       name: 'vendors',
+    //       chunks: 'all'
+    //     }
+    //   }
+    // }
+  // },
   devtool: 'source-map',
   devServer: {
     contentBase: path.join(__dirname, 'src/public'),

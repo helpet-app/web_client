@@ -37,7 +37,7 @@
 									<input v-model="password" id="password" type="password" class="form-control" name="password">
 								</div>
 
-								<button class="btn btn-primary login-btn" type="button" @click="$router.push('/')">Зарегистрироваться</button>
+								<button class="btn btn-primary login-btn" type="button" @click="$router.push('/pages/login')">Зарегистрироваться</button>
 
 								<div class="account-footer text-center mt-3">
 									Уже есть аккаунт? <router-link class="forgot-link mb-0" to="/pages/login">Авторизация</router-link>

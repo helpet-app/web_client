@@ -12,283 +12,74 @@
                                     <span>Чаты</span>
                                 </div>
                                 <!--список чатов-->
-                                <small-chat v-bind:chats="chats"></small-chat>
+                                <div class="chat-users-list">
+                                    <div class="chat-scroll">
+                                        <div @click="setChatId(0)">
+                                        <a class="media">
+                                            <div class="media-img-wrap">
+                                                <div class="avatar avatar-away">
+                                                    <img src="../../assets/img/website/user/face1.jpg" alt="User Image" class="avatar-img rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <div>
+                                                    <div class="user-name">{{ chats[0].name }}</div>
+                                                    <div class="user-last-chat">{{ chats[0].msg }}</div>
+                                                </div>
+                                                <div>
+                                                    <div class="last-chat-time block">{{ chats[0].lastMsgTime }}</div>
+                                                    <div v-if="chats[0].unreadMsgNum" class="badge badge-success badge-pill fill-blue">{{ chats[0].unreadMsgNum }}</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        </div>
+                                        <div @click="setChatId(1)">
+                                        <a href="javascript:void(0);" class="media">
+                                            <div class="media-img-wrap">
+                                                <div class="avatar avatar-away">
+                                                    <img src="../../assets/img/website/user/face2.jpg" alt="User Image" class="avatar-img rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <div>
+                                                    <div class="user-name">{{ chats[1].name }}</div>
+                                                    <div class="user-last-chat">{{ chats[1].msg }}</div>
+                                                </div>
+                                                <div>
+                                                    <div class="last-chat-time block">{{ chats[1].lastMsgTime }}</div>
+                                                    <div v-if="chats[1].unreadMsgNum" class="badge badge-success badge-pill fill-blue">{{ chats[1].unreadMsgNum }}</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        </div>
+                                        <div @click="setChatId(2)">
+                                        <a href="javascript:void(0);" class="media">
+                                            <div class="media-img-wrap">
+                                                <div class="avatar avatar-away">
+                                                    <img src="../../assets/img/website/user/face3.jpg" alt="User Image" class="avatar-img rounded-circle">
+                                                </div>
+                                            </div>
+                                            <div class="media-body">
+                                                <div>
+                                                    <div class="user-name">{{ chats[2].name }}</div>
+                                                    <div class="user-last-chat">{{ chats[2].msg }}</div>
+                                                </div>
+                                                <div>
+                                                    <div class="last-chat-time block">{{ chats[2].lastMsgTime }}</div>
+                                                    <div v-if="chats[2].unreadMsgNum" class="badge badge-success badge-pill fill-blue">{{ chats[2].unreadMsgNum }}</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                        </div>
+<!--                                            </div>-->
+<!--                                        </div>-->
+                                    </div>
+                                </div>
                                 <!--/список чатов-->
                             </div>
-                            <!-- /Chat Left -->
 
                             <!-- Chat Right -->
-                            <div class="chat-cont-right">
-                                <div class="chat-header">
-                                    <div class="media">
-                                        <div class="user-name">
-                                            <ul class="nav header-navbar-rht">
-                                                <li class="nav-item dropdown logged-item">
-                                                    <a class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                                        <span class="user-img">
-                                                            <img class="rounded-circle mr-2" src="../../assets/img/website/user/user.jpg"
-                                                                 width="31" alt="Darren Elder">
-                                                            Клиент
-                                                        </span>
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a class="dropdown-item" href="/mentor/index">Перейти в профиль</a>
-                                                        <a class="dropdown-item" href="/mentor/profile-settings">История приемов</a>
-                                                        <a class="dropdown-item" href="/pages/login">Оставить комментарий после приема</a>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="media">
-                                        <div class="user-name">
-                                            <ul class="nav header-navbar-rht">
-                                                <li class="nav-item dropdown logged-item">
-                                                    <a class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                                        <span class="user-img">
-                                                            <img class="rounded-circle mr-2" src="../../assets/img/website/user/user.jpg"
-                                                                 width="31" alt="Darren Elder">
-                                                            Питомец
-                                                        </span>
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-right">
-                                                        <a class="dropdown-item" href="/mentor/index">Перейти в профиль</a>
-                                                        <a class="dropdown-item" href="/mentor/profile-settings">История приемов</a>
-                                                        <a class="dropdown-item" href="/pages/login">Оставить комментарий после приема</a>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="chat-body">
-                                    <div class="chat-scroll">
-                                        <ul class="list-unstyled">
-                                            <li class="media sent">
-                                                <div class="media-body">
-                                                    <div class="msg-box">
-                                                        <div>
-                                                            <p>Hello. What can I do for you?</p>
-                                                            <ul class="chat-msg-info">
-                                                                <li>
-                                                                    <div class="chat-time">
-                                                                        <span>8:30 AM</span>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="media received">
-                                                <div class="avatar">
-                                                    <img src="../../assets/img/website/user/user.jpg" alt="User Image" class="avatar-img rounded-circle">
-                                                </div>
-                                                <div class="media-body">
-                                                    <div class="msg-box">
-                                                        <div>
-                                                            <p>I'm just looking around.</p>
-                                                            <p>Will you tell me something about yourself?</p>
-                                                            <ul class="chat-msg-info">
-                                                                <li>
-                                                                    <div class="chat-time">
-                                                                        <span>8:35 AM</span>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="msg-box">
-                                                        <div>
-                                                            <p>Are you there? That time!</p>
-                                                            <ul class="chat-msg-info">
-                                                                <li>
-                                                                    <div class="chat-time">
-                                                                        <span>8:40 AM</span>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="msg-box">
-                                                        <div>
-                                                            <div class="chat-msg-attachments">
-                                                                <div class="chat-attachment">
-                                                                    <img src="../../assets/img/website/img-02.jpg" alt="Attachment">
-                                                                    <div class="chat-attach-caption">placeholder.jpg</div>
-                                                                    <a href="" class="chat-attach-download">
-                                                                        <i class="fas fa-download"></i>
-                                                                    </a>
-                                                                </div>
-                                                                <div class="chat-attachment">
-                                                                    <img src="../../assets/img/website/img-03.jpg" alt="Attachment">
-                                                                    <div class="chat-attach-caption">placeholder.jpg</div>
-                                                                    <a href="" class="chat-attach-download">
-                                                                        <i class="fas fa-download"></i>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <ul class="chat-msg-info">
-                                                                <li>
-                                                                    <div class="chat-time">
-                                                                        <span>8:41 AM</span>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="media sent">
-                                                <div class="media-body">
-                                                    <div class="msg-box">
-                                                        <div>
-                                                            <p>Where?</p>
-                                                            <ul class="chat-msg-info">
-                                                                <li>
-                                                                    <div class="chat-time">
-                                                                        <span>8:42 AM</span>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="msg-box">
-                                                        <div>
-                                                            <p>OK, my name is Limingqiang. I like singing, playing basketballand so on.</p>
-                                                            <ul class="chat-msg-info">
-                                                                <li>
-                                                                    <div class="chat-time">
-                                                                        <span>8:42 AM</span>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="msg-box">
-                                                        <div>
-                                                            <div class="chat-msg-attachments">
-                                                                <div class="chat-attachment">
-                                                                    <img src="../../assets/img/website/img-04.jpg" alt="Attachment">
-                                                                    <div class="chat-attach-caption">placeholder.jpg</div>
-                                                                    <a href="" class="chat-attach-download">
-                                                                        <i class="fas fa-download"></i>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <ul class="chat-msg-info">
-                                                                <li>
-                                                                    <div class="chat-time">
-                                                                        <span>8:50 AM</span>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="media received">
-                                                <div class="avatar">
-                                                    <img src="../../assets/img/website/user/user.jpg" alt="User Image" class="avatar-img rounded-circle">
-                                                </div>
-                                                <div class="media-body">
-                                                    <div class="msg-box">
-                                                        <div>
-                                                            <p>You wait for notice.</p>
-                                                            <p>Consectetuorem ipsum dolor sit?</p>
-                                                            <p>Ok?</p>
-                                                            <ul class="chat-msg-info">
-                                                                <li>
-                                                                    <div class="chat-time">
-                                                                        <span>8:55 PM</span>
-                                                                    </div>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="chat-date">Today</li>
-                                            <li class="media received">
-                                                <div class="avatar">
-                                                    <img src="../../assets/img/website/user/user.jpg" alt="User Image" class="avatar-img rounded-circle">
-                                                </div>
-                                                <div class="media-body">
-                                                    <div class="msg-box">
-                                                        <div>
-                                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
-                                                            <ul class="chat-msg-info">
-                                                                <li>
-                                                                    <div class="chat-time">
-                                                                        <span>10:17 AM</span>
-                                                                    </div>
-                                                                </li>
-                                                                <li><a href="#">Edit</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="media sent">
-                                                <div class="media-body">
-                                                    <div class="msg-box">
-                                                        <div>
-                                                            <p>Lorem ipsum dollar sit</p>
-                                                            <div class="chat-msg-actions dropdown">
-                                                                <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                                    <i class="fe fe-elipsis-v"></i>
-                                                                </a>
-                                                                <div class="dropdown-menu dropdown-menu-right">
-                                                                    <a class="dropdown-item" href="#">Delete</a>
-                                                                </div>
-                                                            </div>
-                                                            <ul class="chat-msg-info">
-                                                                <li>
-                                                                    <div class="chat-time">
-                                                                        <span>10:19 AM</span>
-                                                                    </div>
-                                                                </li>
-                                                                <li><a href="#">Edit</a></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li class="media received">
-                                                <div class="avatar">
-                                                    <img src="../../assets/img/website/user/user.jpg" alt="User Image" class="avatar-img rounded-circle">
-                                                </div>
-                                                <div class="media-body">
-                                                    <div class="msg-box">
-                                                        <div>
-                                                            <div class="msg-typing">
-                                                                <span></span>
-                                                                <span></span>
-                                                                <span></span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="chat-footer">
-                                    <div class="input-group">
-                                        <div class="input-group-prepend">
-                                            <div class="btn-file btn">
-                                                <i class="fa fa-paperclip"></i>
-                                                <input type="file">
-                                            </div>
-                                        </div>
-                                        <input type="text" class="input-msg-send form-control" placeholder="Type something">
-                                        <div class="input-group-append">
-                                            <button type="button" class="btn msg-send-btn">Send</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <full-chat v-bind:active-chat-id="activeChatId"></full-chat>
                             <!-- /Chat Right -->
                         </div>
 
@@ -317,25 +108,64 @@
                                             <div class="card card-table">
                                                 <div class="card-body">
                                                     <div class="table-responsive">
+
                                                         <table class="table table-hover table-center mb-0">
                                                             <thead>
                                                                 <tr>
                                                                     <th>Клиент</th>
                                                                     <th class="text-center">SCHEDULED TIMINGS</th>
+                                                                    <th></th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                <tr v-for="item in bookings" :key="item.id">
+
+                                                                <tr v-if="date.getDate() === 4" v-for="item in bookings" :key="item.id" data-toggle="collapse" data-target="#accordion" class="clickable">
                                                                     <td>
                                                                         <h2 class="table-avatar">
                                                                             <router-link to="/mentee/mentor-profile" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" :src="loadImg(item.image)" alt="User Image"></router-link >
                                                                             <router-link to="/mentee/mentor-profile">{{item.name}}<span>{{item.email}}</span></router-link>
                                                                         </h2>
                                                                     </td>
-                                                                    <td class="text-center"><span class="pending">{{item.scheduled_timings}}</span></td>
+                                                                    <td v-if="item.status === 'active'" class="text-center"><span class="accept">{{item.scheduled_timings}}</span></td>
+                                                                    <td v-if="item.status === 'pending'" class="text-center"><span class="pending">{{item.scheduled_timings}}</span></td>
+                                                                    <td v-if="item.status === 'reject'" class="text-center"><span class="reject">{{item.scheduled_timings}}</span></td>
+                                                                    <td>
+                                                                        <button class="btn" type="button" data-toggle="collapse" data-target="#collapseme">
+                                                                            <i class="fas fa-file-invoice" ></i>
+                                                                        </button>
+                                                                    </td>
+                                                                </tr>
+
+                                                                <tr v-if="date.getDate() === 3" v-for="item in bookings2" :key="item.id" data-toggle="collapse" data-target="#accordion" class="clickable">
+                                                                    <td>
+                                                                        <h2 class="table-avatar">
+                                                                            <router-link to="/mentee/mentor-profile" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" :src="loadImg(item.image)" alt="User Image"></router-link >
+                                                                            <router-link to="/mentee/mentor-profile">{{item.name}}<span>{{item.email}}</span></router-link>
+                                                                        </h2>
+                                                                    </td>
+                                                                    <td v-if="item.status === 'active'" class="text-center"><span class="accept">{{item.scheduled_timings}}</span></td>
+                                                                    <td v-if="item.status === 'pending'" class="text-center"><span class="pending">{{item.scheduled_timings}}</span></td>
+                                                                    <td v-if="item.status === 'reject'" class="text-center"><span class="reject">{{item.scheduled_timings}}</span></td>
+                                                                    <td>
+                                                                        <button class="btn" type="button" data-toggle="collapse" data-target="#collapseme">
+                                                                            <i class="fas fa-file-invoice" ></i>
+                                                                        </button>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td colspan="3">
+                                                                        <div id="accordion" class="collapse">
+                                                                            <p>Ссылка: <a href="https://meet.google.com/hog-ybdm-sxi">https://meet.google.com/hog-ybdm-sxi</a> </p>
+                                                                            <span>Комментарий</span>
+                                                                            <textarea class="form-control service-desc" name="about"></textarea>
+                                                                            <button class="btn btn-primary mt-2">Отправить</button>
+                                                                        </div>
+                                                                    </td>
                                                                 </tr>
                                                             </tbody>
+
                                                         </table>
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -356,7 +186,9 @@
 
 <script>
 import bookings from '../../assets/json/website/bookings.json';
+import bookings2 from '../../assets/json/website/bookings2.json';
 import SmallChat from "./SmallChat.vue";
+import FullChat from "./FullChat.vue";
 const images = require.context('../../assets/img/website/user/', false, /\.png$|\.jpg$/)
 
 export default {
@@ -364,17 +196,19 @@ export default {
         return {
             value: '',
             context: null,
+            activeChatId: 0,
             bookings: bookings,
+            bookings2: bookings2,
             date: new Date(),
             chats: [
-                {id: 1, avatar: '../../assets/img/website/user/user14.jpg', name: 'Marvin Downey', msg: 'Hey, How are you?', lastMsgTime: '2 min', unreadMsgNum: '15'},
-                {id: 2, avatar: '../../assets/img/website/user/user1.jpg', name: 'Charlene Reed', msg: 'I\'ll call you later', lastMsgTime: '8:01 PM', unreadMsgNum: ''},
-                {id: 3, avatar: '../../assets/img/website/user/user2.jpg', name: 'Travis Trimble', msg: 'Give me a full explanation about our project', lastMsgTime: '7:30 PM', unreadMsgNum: '4'},
+                {id: 1, avatar: '', name: 'Ирина Лукина', msg: 'Спасибо, увидимся в назначенное время.', lastMsgTime: '8:42 AM', unreadMsgNum: ''},
+                {id: 2, avatar: '../../assets/img/website/user/user1.jpg', name: 'Дмитрий Соколов', msg: 'Давайте', lastMsgTime: '8:45 AM', unreadMsgNum: ''},
+                {id: 3, avatar: '../../assets/img/website/user/user2.jpg', name: 'Иван Сергеенко', msg: 'С ним все хорошо', lastMsgTime: '8:46 AM', unreadMsgNum: ''},
             ],
         }
     },
     methods: {
-        // Чаты
+        // Чаты (нет апи:() )
         fetchChats(){
 
         },
@@ -382,16 +216,21 @@ export default {
 
         },
 
+        setChatId: function (newId) {
+            this.activeChatId = newId;
+        },
 
         //Расписание
         fetchShedule(){
 
         },
+
         loadImg(imgPath) {
             return images('./' + imgPath).default
         },
     },
     components: {
+        FullChat,
         SmallChat
 
     }

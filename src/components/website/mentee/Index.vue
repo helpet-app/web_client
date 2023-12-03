@@ -8,7 +8,7 @@
 
 					<div class="row">
 						<div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
-                            <sidebar1></sidebar1>
+<!--                            <sidebar1></sidebar1>-->
 						</div>
 						
 						<div class="col-md-7 col-lg-8 col-xl-9">

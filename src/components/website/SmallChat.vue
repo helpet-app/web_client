@@ -2,6 +2,7 @@
     <div class="chat-users-list">
         <div class="chat-scroll">
             <div v-for="chat in chats">
+                <button @click="setChatId(chat.id)">
                 <a href="javascript:void(0);" class="media">
                     <div class="media-img-wrap">
                         <div class="avatar avatar-away">
@@ -19,6 +20,7 @@
                         </div>
                     </div>
                 </a>
+                </button>
             </div>
         </div>
     </div>
@@ -30,7 +32,10 @@ export default {
       chats: {
           type: Array,
           required: true,
-      }
+      },
+        chatId: {
+
+        }
     },
     data() {
         return {
@@ -38,7 +43,10 @@ export default {
         }
     },
     methods: {
-
+        setChatId: function (newId) {
+            this.chatId = newId;
+            this.$emit('setChatId')
+        }
     }
 }
 </script>
